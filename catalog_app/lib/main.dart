@@ -1,5 +1,6 @@
 import 'package:catalog_app/home_page.dart';
 import 'package:catalog_app/login_page.dart';
+import 'package:catalog_app/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -16,11 +17,12 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'catlog app',
         theme: ThemeData(
-            primarySwatch: Colors.grey,
+            primarySwatch: Colors.blueGrey,
             fontFamily: GoogleFonts.lato().fontFamily),
+        initialRoute: "/",
         routes: {
-          "/": (context) => LoginPage(),
-          "/homepage": (context) => HomePage(),
+          '/': (context) => LoginPage(),
+          '/home': (context) => HomePage(),
         });
   }
 }
