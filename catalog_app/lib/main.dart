@@ -1,6 +1,6 @@
 import 'package:catalog_app/home_page.dart';
 import 'package:catalog_app/login_page.dart';
-import 'package:catalog_app/utils/routes.dart';
+import 'package:catalog_app/pages/cart_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,14 +15,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'catlog app',
+        title: 'Catalog app',
         theme: ThemeData(
             primarySwatch: Colors.blueGrey,
-            fontFamily: GoogleFonts.lato().fontFamily),
+            fontFamily: GoogleFonts.poppins().fontFamily),
         initialRoute: "/",
         routes: {
           '/': (context) => LoginPage(),
           '/home': (context) => HomePage(),
+          '/cart': (context) => CartPage()
         });
   }
 }
